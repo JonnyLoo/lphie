@@ -1,0 +1,130 @@
+$white: #e8eef1;
+$blue-grotto: #43b0f1;
+$royal-blue: #057dcd;
+$navy-blue: #1e3d58;
+
+body {
+  background: $navy-blue;
+  color: $white;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+#letters {
+  img {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  h1 {
+    top: 50%;
+  }
+}
+
+.menu-icon {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999;
+
+  .menu-line1,
+  .menu-line2,
+  .menu-line3 {
+    width: 35px;
+    height: 4px;
+    background-color: $royal-blue;
+    margin: 6px 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  &:hover > .menu-line1,
+  &:hover > .menu-line3 {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+
+  &:hover > .menu-line2 {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+}
+
+.menu-icon.open {
+  .menu-line1.open {
+    background-color: $white;
+    -webkit-transform: rotate(-45deg) translate(-5px, 9px);
+    transform: rotate(-45deg) translate(-5px, 9px);
+  }
+
+  .menu-line2.open {
+    opacity: 0;
+  }
+
+  .menu-line3.open {
+    background-color: $white;
+    -webkit-transform: rotate(45deg) translate(-5px, -9px);
+    transform: rotate(45deg) translate(-5px, -9px);
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+
+  ul {
+    visibility: hidden;
+  }
+}
+
+.menu.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $royal-blue;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  ul {
+    visibility: visible;
+    display: block;
+    list-style: none;
+    height: 70%;
+    transform: translateY(15%);
+    li {
+      display: table;
+      height: 20%;
+      margin-left: 400px;
+      padding-top: 40px;
+      a {
+        text-decoration: none;
+        font-size: 2em;
+        color: $white;
+        text-align: center;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+        &:hover {
+          color: $navy-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+body {
+  background: #1e3d58;
+  color: #e8eef1;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0; }
+
+#letters img {
+  position: fixed;
+  right: 10px;
+  bottom: 10px; }
+
+.content {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+  .content h1 {
+    top: 50%; }
+
+.menu-icon {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 999; }
+  .menu-icon .menu-line1,
+  .menu-icon .menu-line2,
+  .menu-icon .menu-line3 {
+    width: 35px;
+    height: 4px;
+    background-color: #057dcd;
+    margin: 6px 0;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+  .menu-icon:hover > .menu-line1,
+  .menu-icon:hover > .menu-line3 {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px); }
+  .menu-icon:hover > .menu-line2 {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px); }
+
+.menu-icon.open .menu-line1.open {
+  background-color: #e8eef1;
+  -webkit-transform: rotate(-45deg) translate(-5px, 9px);
+  transform: rotate(-45deg) translate(-5px, 9px); }
+
+.menu-icon.open .menu-line2.open {
+  opacity: 0; }
+
+.menu-icon.open .menu-line3.open {
+  background-color: #e8eef1;
+  -webkit-transform: rotate(45deg) translate(-5px, -9px);
+  transform: rotate(45deg) translate(-5px, -9px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+  .menu ul {
+    visibility: hidden; }
+
+.menu.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #057dcd;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+  .menu.open ul {
+    visibility: visible;
+    display: block;
+    list-style: none;
+    height: 70%;
+    transform: translateY(15%); }
+    .menu.open ul li {
+      display: table;
+      height: 20%;
+      margin-left: 400px;
+      padding-top: 40px; }
+      .menu.open ul li a {
+        text-decoration: none;
+        font-size: 2em;
+        color: #e8eef1;
+        text-align: center;
+        -webkit-transition: 0.1s;
+        transition: 0.1s; }
+        .menu.open ul li a:hover {
+          color: #1e3d58; }
