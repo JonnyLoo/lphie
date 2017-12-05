@@ -27,7 +27,7 @@ link1.addEventListener('click', function(e) {
   toggleMenu();
 
   ReactDOM.render(
-    <h1>Link1</h1>,
+    <h1 id='link1'>Link1</h1>,
     content
   );
 });
@@ -38,7 +38,7 @@ link2.addEventListener('click', function(e) {
   toggleMenu();
 
   ReactDOM.render(
-    <h1>Link2</h1>,
+    <h1 id='link2'>Link2</h1>,
     content
   );
 });
@@ -49,7 +49,7 @@ link3.addEventListener('click', function(e) {
   toggleMenu();
 
   ReactDOM.render(
-    <h1>Link3</h1>,
+    <h1 id='link3'>Link3</h1>,
     content
   );
 });
@@ -60,7 +60,7 @@ link4.addEventListener('click', function(e) {
   toggleMenu();
 
   ReactDOM.render(
-    <h1>Link4</h1>,
+    <h1 id='link4'>Link4</h1>,
     content
   );
 });
@@ -71,7 +71,7 @@ link5.addEventListener('click', function(e) {
   toggleMenu();
 
   ReactDOM.render(
-    <h1>Link5</h1>,
+    <h1 id='link5'>Link5</h1>,
     content
   );
 });

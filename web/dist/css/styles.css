@@ -14,10 +14,14 @@ body {
 .content {
   text-align: center;
   width: 100%;
-  height: 100%;
-  z-index: -1; }
+  z-index: -1;
+  font-size: 50px; }
   .content h1 {
-    top: 50%; }
+    margin-top: 20%; }
+  .content #link1 {
+    animation: spinIn 1s; }
+  .content #link4 {
+    animation: bounceIn 1.5s; }
 
 .menu-icon {
   position: fixed;
@@ -55,6 +59,10 @@ body {
   background-color: #e8eef1;
   -webkit-transform: rotate(45deg) translate(-5px, -9px);
   transform: rotate(45deg) translate(-5px, -9px); }
+
+.menu-icon.open:hover > .menu-line1.open,
+.menu-icon.open:hover > .menu-line3.open {
+  background-color: #1e3d58; }
 
 .menu {
   position: fixed;
@@ -97,3 +105,19 @@ body {
         transition: 0.1s; }
         .menu.open ul li a:hover {
           color: #1e3d58; }
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0; }
+  60% {
+    transform: scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1); } }
+
+@keyframes spinIn {
+  from {
+    transform: scale(0.1) rotate(0deg); }
+  to {
+    transform: scale(1) rotate(360deg); } }

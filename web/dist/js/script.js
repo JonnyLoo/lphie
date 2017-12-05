@@ -28,7 +28,7 @@ link1.addEventListener('click', function (e) {
 
   ReactDOM.render(React.createElement(
     'h1',
-    null,
+    { id: 'link1' },
     'Link1'
   ), content);
 });
@@ -40,7 +40,7 @@ link2.addEventListener('click', function (e) {
 
   ReactDOM.render(React.createElement(
     'h1',
-    null,
+    { id: 'link2' },
     'Link2'
   ), content);
 });
@@ -52,7 +52,7 @@ link3.addEventListener('click', function (e) {
 
   ReactDOM.render(React.createElement(
     'h1',
-    null,
+    { id: 'link3' },
     'Link3'
   ), content);
 });
@@ -64,7 +64,7 @@ link4.addEventListener('click', function (e) {
 
   ReactDOM.render(React.createElement(
     'h1',
-    null,
+    { id: 'link4' },
     'Link4'
   ), content);
 });
@@ -76,7 +76,7 @@ link5.addEventListener('click', function (e) {
 
   ReactDOM.render(React.createElement(
     'h1',
-    null,
+    { id: 'link5' },
     'Link5'
   ), content);
 });
