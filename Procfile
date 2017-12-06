@@ -1,1 +1,1 @@
-web: npm install; gulp; cd web; node app.js
+web: npm install; cd web; node app.js
