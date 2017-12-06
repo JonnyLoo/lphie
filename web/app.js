@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 
 console.log('connected');
 
-app.listen(4444);
+app.listen(proess.env.PORT || 4444);
