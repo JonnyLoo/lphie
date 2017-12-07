@@ -81,6 +81,8 @@ body {
   z-index: 1;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out; }
+  .menu h2 {
+    visibility: hidden; }
   .menu ul {
     visibility: hidden; }
 
@@ -93,18 +95,26 @@ body {
   background-color: #057dcd;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out; }
+  .menu.open h2 {
+    font-size: 5em;
+    text-align: center;
+    visibility: visible;
+    display: block;
+    width: 12%;
+    transform: translate(500%, -300%); }
   .menu.open ul {
     visibility: visible;
     display: block;
     list-style: none;
     height: 70%;
-    transform: translateY(15%); }
+    width: 20%;
+    transform: translate(100%, 15%); }
     .menu.open ul li {
       display: table;
       height: 20%;
-      margin-left: 400px;
       padding-top: 40px; }
       .menu.open ul li a {
+        display: table;
         text-decoration: none;
         font-size: 2em;
         color: #e8eef1;

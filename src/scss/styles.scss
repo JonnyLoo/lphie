@@ -110,7 +110,9 @@ body {
   z-index: 1;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-
+  h2 {
+    visibility: hidden;
+  }
   ul {
     visibility: hidden;
   }
@@ -125,18 +127,27 @@ body {
   background-color: $royal-blue;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  h2 {
+    font-size: 5em;
+    text-align: center;
+    visibility: visible;
+    display: block;
+    width: 12%;
+    transform: translate(500%, -300%);
+  }
   ul {
     visibility: visible;
     display: block;
     list-style: none;
     height: 70%;
-    transform: translateY(15%);
+    width: 20%;
+    transform: translate(100%, 15%);
     li {
       display: table;
       height: 20%;
-      margin-left: 400px;
       padding-top: 40px;
       a {
+        display: table;
         text-decoration: none;
         font-size: 2em;
         color: $white;
