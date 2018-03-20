@@ -1,1 +1,1 @@
-web: npm install; cd web; node app.js
+web: cd web; node app.js
