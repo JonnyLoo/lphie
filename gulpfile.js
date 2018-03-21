@@ -15,41 +15,41 @@ var banner = ['/*!\n',
   ''
 ].join('');
 
-// Copy third party libraries from /node_modules into /vendor
-gulp.task('vendor', function() {
-
-  // Bootstrap
-  gulp.src([
-      './node_modules/bootstrap/dist/**/*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-    ])
-    .pipe(gulp.dest('./web/dist/vendor/bootstrap'))
-
-  // Font Awesome
-  gulp.src([
-      './node_modules/font-awesome/**/*',
-      '!./node_modules/font-awesome/{less,less/*}',
-      '!./node_modules/font-awesome/{scss,scss/*}',
-      '!./node_modules/font-awesome/.*',
-      '!./node_modules/font-awesome/*.{txt,json,md}'
-    ])
-    .pipe(gulp.dest('./web/dist/vendor/font-awesome'))
-
-  // jQuery
-  gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./web/dist/vendor/jquery'))
-
-  // jQuery Easing
-  gulp.src([
-      './node_modules/jquery.easing/*.js'
-    ])
-    .pipe(gulp.dest('./web/dist/vendor/jquery-easing'))
-
-});
+// // Copy third party libraries from /node_modules into /vendor
+// gulp.task('vendor', function() {
+//
+//   // Bootstrap
+//   gulp.src([
+//       './node_modules/bootstrap/dist/**/*',
+//       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
+//       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
+//     ])
+//     .pipe(gulp.dest('./web/dist/vendor/bootstrap'))
+//
+//   // Font Awesome
+//   gulp.src([
+//       './node_modules/font-awesome/**/*',
+//       '!./node_modules/font-awesome/{less,less/*}',
+//       '!./node_modules/font-awesome/{scss,scss/*}',
+//       '!./node_modules/font-awesome/.*',
+//       '!./node_modules/font-awesome/*.{txt,json,md}'
+//     ])
+//     .pipe(gulp.dest('./web/dist/vendor/font-awesome'))
+//
+//   // jQuery
+//   gulp.src([
+//       './node_modules/jquery/dist/*',
+//       '!./node_modules/jquery/dist/core.js'
+//     ])
+//     .pipe(gulp.dest('./web/dist/vendor/jquery'))
+//
+//   // jQuery Easing
+//   gulp.src([
+//       './node_modules/jquery.easing/*.js'
+//     ])
+//     .pipe(gulp.dest('./web/dist/vendor/jquery-easing'))
+//
+// });
 
 // Compile SCSS
 gulp.task('css:compile', function() {
@@ -57,7 +57,7 @@ gulp.task('css:compile', function() {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./web/dist/css'))
+    .pipe(gulp.dest('./src/css'))
 });
 
 // Minify CSS
@@ -93,7 +93,7 @@ gulp.task('js:minify', function() {
 gulp.task('js', ['js:minify']);
 
 // Default task
-gulp.task('default', ['css', 'js', 'vendor']);
+gulp.task('default', ['css', 'js']);
 
 // Dev task
 gulp.task('dev', ['css', 'js'], function() {
